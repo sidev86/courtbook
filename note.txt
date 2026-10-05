@@ -3,3 +3,4 @@
 - prompt per generare context file :
 mi creeresti un file di contesto del progetto con definito anche lo stato attuale, ovvero a che punto sono con lo sviluppo. in modo da proseguire su un altra chat
 
+- Chi clona il repo (e anche la CI) dovrà eseguire pnpm prisma generate dopo l'installazione: segnatelo, ti servirà quando configureremo GitHub Actions.
