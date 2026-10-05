@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateCourtDto } from './dto/create-court.dto';
 
@@ -17,5 +17,13 @@ export class CourtsService {
         type: dto.type,
       },
     });
+  }
+
+  async findOne(id: string) {
+    const court = await this.prisma.court.findUnique({ where: { id } });
+    if (!court) {
+      throw new NotFoundException(`Court ${id} not found`);
+    }
+    return court;
   }
 }
