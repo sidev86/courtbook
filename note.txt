@@ -1,6 +1,0 @@
-- Indici sulle chiavi esterne: Postgres non li crea in automatico sulle FK. Quando farai query tipo "tutte le prenotazioni di questo campo in questa data", ti servirà @@index([resourceId, startsAt]) in Booking. Puoi aggiungerlo ora o dopo.
-
-- prompt per generare context file :
-mi creeresti un file di contesto del progetto con definito anche lo stato attuale, ovvero a che punto sono con lo sviluppo. in modo da proseguire su un altra chat
-
-- Chi clona il repo (e anche la CI) dovrà eseguire pnpm prisma generate dopo l'installazione: segnatelo, ti servirà quando configureremo GitHub Actions.
