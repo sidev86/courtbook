@@ -39,7 +39,9 @@ describe('CourtsService', () => {
   it('throws NotFoundException when missing', async () => {
     prismaMock.court.findUnique.mockResolvedValue(null);
 
-    await expect(service.findOne('x')).rejects.toThrow(NotFoundException);
-    await expect(service.findOne('x')).rejects.toThrow('x');
+    await expect(service.findOne('court-123')).rejects.toThrow(
+      NotFoundException,
+    );
+    await expect(service.findOne('court-123')).rejects.toThrow('court-123');
   });
 });
